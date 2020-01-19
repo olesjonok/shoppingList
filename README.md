@@ -7,6 +7,3 @@ https://github.com/olesjonok/shoppingList.git
 
 teacher name: Alex
 
-Now app can:
-1. Create product
-2. Find product by ID
