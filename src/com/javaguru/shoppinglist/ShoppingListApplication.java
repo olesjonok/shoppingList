@@ -15,19 +15,22 @@ class ShoppingListApplication {
             try {
                 System.out.println("1. Create product");
                 System.out.println("2. Find product by id");
-                System.out.println("3. Exit");
-                Integer userInput = Integer.valueOf(scanner.nextLine());
+                System.out.println("3. Remove product");
+                System.out.println("4. Exit");
+                int userInput = Integer.parseInt(scanner.nextLine());
                 switch (userInput) {
                     case 1:
                         String name;
                         do {
                             System.out.println("Enter product name: ");
                             name = scanner.nextLine();
+                            System.out.println("Product name can't be less than 3 and more than 32 symbols!");
                         } while (name.length() < 3 || name.length() > 32);
                         BigDecimal price;
                         do {
                             System.out.println("Enter product price: ");
                             price = new BigDecimal(scanner.nextLine());
+                            System.out.println("Product price can't be negative!");
                         } while (price.signum() == -1);
                         System.out.println("Enter product category: ");
                         String category = scanner.nextLine();
@@ -35,6 +38,7 @@ class ShoppingListApplication {
                         do {
                             System.out.println("Enter product discount: ");
                             discount = Integer.parseInt(scanner.nextLine());
+                            System.out.println("Product discount can't be less than 0% and more than 100%!");
                         } while (discount > 100 || discount < 0);
                         System.out.println("Enter product description: ");
                         String description = scanner.nextLine();
@@ -56,6 +60,11 @@ class ShoppingListApplication {
                         System.out.println(findProductResult);
                         break;
                     case 3:
+                        System.out.println("Enter product id for name removing: ");
+                        long idRemoveID = scanner.nextLong();
+                        productRepository.remove(idRemoveID);
+                        break;
+                    case 4:
                         return;
                 }
             } catch (Exception e) {
