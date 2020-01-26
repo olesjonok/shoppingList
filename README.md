@@ -1,11 +1,10 @@
-# Shopping List
-Java-2 main project
+## Shopping List
+
+_Java-2 main project_
 
 **Olesja Vasiljeva**
 
-https://github.com/olesjonok/shoppingList.git
-
-teacher name: Alex
+teacher name: **Alex**
 
 Now app can:
 1. Create product
