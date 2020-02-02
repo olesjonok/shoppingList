@@ -13,8 +13,8 @@ public class ConsoleUI {
         while (true) {
             Scanner scanner = new Scanner(System.in);
             try {
-                System.out.println("1. Create task");
-                System.out.println("2. Find task by id");
+                System.out.println("1. Create product");
+                System.out.println("2. Find product by id");
                 System.out.println("3. Exit");
                 int userInput = scanner.nextInt();
                 switch (userInput) {
@@ -54,7 +54,7 @@ public class ConsoleUI {
         product.setDescription(description);
 
         Long id = productService.createProduct(product);
-        System.out.println("Result: " + id);
+        System.out.println("Id: " + id);
     }
 
     private void findProduct() {
