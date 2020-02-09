@@ -1,7 +1,7 @@
-package com.javaguru.todolist.console;
+package com.todolist.console;
 
-import com.javaguru.todolist.domain.Product;
-import com.javaguru.todolist.service.ProductService;
+import com.todolist.domain.Product;
+import com.todolist.service.ProductService;
 
 import java.math.BigDecimal;
 import java.util.Scanner;

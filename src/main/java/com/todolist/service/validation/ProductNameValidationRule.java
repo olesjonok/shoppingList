@@ -1,6 +1,7 @@
-package com.javaguru.todolist.service.validation;
+package com.todolist.service.validation;
 
-import com.javaguru.todolist.domain.Product;
+
+import com.todolist.domain.Product;
 
 public class ProductNameValidationRule implements ProductValidationRule {
 
