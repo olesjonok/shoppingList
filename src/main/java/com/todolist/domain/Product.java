@@ -1,4 +1,4 @@
-package com.javaguru.todolist.domain;
+package com.todolist.domain;
 
 import java.math.BigDecimal;
 import java.util.Objects;

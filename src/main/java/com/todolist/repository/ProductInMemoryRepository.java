@@ -1,6 +1,6 @@
-package com.javaguru.todolist.repository;
+package com.todolist.repository;
 
-import com.javaguru.todolist.domain.Product;
+import com.todolist.domain.Product;
 
 import java.util.HashMap;
 import java.util.Map;
