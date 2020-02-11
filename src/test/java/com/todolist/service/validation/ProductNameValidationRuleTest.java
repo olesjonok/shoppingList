@@ -9,11 +9,10 @@ public class ProductNameValidationRuleTest {
     @Rule
     public final ExpectedException expectedException = ExpectedException.none();
     private ProductNameValidationRule victim = new ProductNameValidationRule();
-    private Product input;
 
     @Test
     public void shouldThrowTaskValidationException() {
-        input = product(null);
+        Product input = product(null);
         expectedException.expect(ProductValidationException.class);
         expectedException.expectMessage("Task name must be not null.");
         victim.validate(input);

@@ -33,14 +33,14 @@ public class ProductServiceTest {
 
     @Test
     public void shouldFindTask() {
-        when(repository.findProductById(1001L)).thenReturn(product());
+        when(repository.findProductById(1001L)).thenReturn(buildProduct());
         Product result = victim.findProductById(1001L);
-        assertEquals(product(), result);
+        assertEquals(buildProduct(), result);
     }
 
     @Test
     public void shouldCreateProductSuccessfully() {
-        Product product = product();
+        Product product = buildProduct();
         when(repository.insert(product)).thenReturn(product);
         Long result = victim.createProduct(product);
         verify(validationService).validate(productCaptor.capture());
@@ -49,7 +49,7 @@ public class ProductServiceTest {
         assertEquals(product.getId(), result);
     }
 
-    private Product product() {
+    private Product buildProduct() {
         Product product = new Product();
         product.setName("TEST_NAME");
         BigDecimal price = new BigDecimal("0.03");

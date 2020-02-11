@@ -8,6 +8,8 @@ public class ProductService {
     private ProductInMemoryRepository repository = new ProductInMemoryRepository();
     private ProductValidationService validationService = new ProductValidationService();
 
+    // Implement Dependency Injection through constructor
+
     public Long createProduct(Product product) {
         validationService.validate(product);
         Product createdProduct = repository.insert(product);
